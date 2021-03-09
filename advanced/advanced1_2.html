@@ -28,6 +28,9 @@
         function popUp(x){
             document.getElementsByClassName("description")[0].innerHTML = x;
         }
+        function changeColorTo(y) {
+            document.getElementById("circle").style.backgroundColor = y;
+        }
 
         document.getElementById("circle").addEventListener("mouseover", function() {
             popUp("You are in the circle")
@@ -38,11 +41,11 @@
         });
 
         document.getElementById("circle").addEventListener("click", function() {
-            document.getElementById("circle").style.backgroundColor = "grey";
+            changeColorTo("grey");
         });
 
         document.getElementById("circle").addEventListener("dblclick", function() {
-            document.getElementById("circle").style.backgroundColor = "blue";
+            changeColorTo("blue");
         });
 
 
