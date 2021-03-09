@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #circle{
+            width: 30vw;
+            height: 30vw;
+            border-style: solid;
+            border-radius: 50%;
+            
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            padding-top: 10vw;
+        }
+    </style>
+</head>
+<body>
+    <div id="circle"></div>
+    <div class="description"></div>
+
+    <script>
+        function popUp(){
+            document.getElementsByClassName("description")[0].innerHTML = "You are in the circle."
+        }
+
+        document.getElementById("circle").addEventListener("mouseover", popUp);
+        document.getElementById("circle").addEventListener("mouseover", popUp);
+        
+
+//         let test = document.getElementById("test");
+//         test.addEventListener("mouseover", function( event ) {
+//   // highlight the mouseover target
+//     event.target.style.color = "orange";
+    </script>
+</body>
+</html>
