@@ -8,18 +8,21 @@
 </head>
 <body>
     <input type="submit" id="submitBtn">
+    <div>Color change will happen here</div>
 
 
     <script>
-        function randomColor(){
-            return Math.floor(Math.random() * 255);
-        }
+        // function randomColor(){
+        //     return Math.floor(Math.random() * 255);
+        // }
+
+        var randomColor = Math.floor(Math.random() * 255);
         
         function changeColor(){
-            document.getElementsByTagName("body").style.backgroundColor = "rgb("+randomColor()+","+randomColor()+","+randomColor()+")";
+            document.getElementsByTagName("div").style.backgroundColor = `rgb(${randomColor} + ${randomColor} + ${randomColor})`;
         }
         document.getElementById("submitBtn").addEventListener("click",changeColor);
-        console.log(randomColor());
+        console.log(randomColor);
 
     </script>
 </body>
