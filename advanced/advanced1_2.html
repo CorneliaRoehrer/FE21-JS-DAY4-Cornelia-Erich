@@ -25,12 +25,27 @@
     <div class="description"></div>
 
     <script>
-        function popUp(){
-            document.getElementsByClassName("description")[0].innerHTML = "You are in the circle."
+        function popUp(x){
+            document.getElementsByClassName("description")[0].innerHTML = x;
         }
 
-        document.getElementById("circle").addEventListener("mouseover", popUp);
-        document.getElementById("circle").addEventListener("mouseout", popUp);
+        document.getElementById("circle").addEventListener("mouseover", function() {
+            popUp("You are in the circle")
+        });
+
+        document.getElementById("circle").addEventListener("mouseout", function() {
+            popUp("You are outside the circle")
+        });
+
+        document.getElementById("circle").addEventListener("click", function() {
+            document.getElementById("circle").style.backgroundColor = "grey";
+        });
+
+        document.getElementById("circle").addEventListener("dblclick", function() {
+            document.getElementById("circle").style.backgroundColor = "blue";
+        });
+
+
         
 
 //         let test = document.getElementById("test");
